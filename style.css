@@ -1,0 +1,129 @@
+/* Estilo Ejecutivo Carlos Hernández - Inspiración LinkedIn */
+:root {
+    --li-blue: #0a66c2;        /* Azul LinkedIn */
+    --li-dark-blue: #004182;   /* Azul Hover */
+    --li-bg: #f3f2ef;          /* Fondo gris claro LinkedIn */
+    --li-white: #ffffff;
+    --li-text: #000000;
+    --li-text-low: rgba(0,0,0,0.6); /* Texto secundario */
+    --li-border: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--li-bg);
+    color: var(--li-text);
+    line-height: 1.5;
+}
+
+/* Header con estilo de Banner Profesional */
+header {
+    background-color: var(--li-white);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--li-border);
+}
+
+header h1 {
+    color: var(--li-text);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+header p {
+    color: var(--li-text-low);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Barra de Navegación Estilo Sticky */
+nav {
+    display: flex;
+    justify-content: center;
+    background: var(--li-white);
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--li-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: var(--li-text-low);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a:hover {
+    color: var(--li-text);
+    border-bottom: 2px solid var(--li-text);
+}
+
+/* Contenedor Principal */
+main {
+    max-width: 800px; /* Ancho similar al feed de LinkedIn */
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+/* Tarjetas Estilo Secciones de LinkedIn */
+.card {
+    background: var(--li-white);
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--li-border);
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--li-text);
+}
+
+p {
+    color: var(--li-text-low);
+    margin-bottom: 12px;
+}
+
+/* Estilo para artículos del Blog */
+article h3 {
+    color: var(--li-blue);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+article h3:hover {
+    text-decoration: underline;
+}
+
+/* Citas destacadas ejecutivas */
+blockquote {
+    margin: 15px 0;
+    padding-left: 15px;
+    border-left: 4px solid var(--li-text-low);
+    color: var(--li-text-low);
+    font-style: italic;
+}
+
+/* Footer Minimalista */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--li-bg);
+    color: var(--li-text-low);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--li-border);
+}
