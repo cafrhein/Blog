@@ -1,8 +1,7 @@
-/* Estilo Ejecutivo Carlos Hernández - Inspiración LinkedIn con Iconografía */
+/* Estilo Ejecutivo Carlos - Ajuste de Espacios e Interlineado */
 :root {
-    --li-blue: #0a66c2;        /* Azul primario LinkedIn */
-    --li-dark-blue: #004182;   /* Azul para estados activos */
-    --li-bg: #f3f2ef;          /* Gris de fondo característico */
+    --li-blue: #0a66c2;
+    --li-bg: #f3f2ef;
     --li-white: #ffffff;
     --li-text: rgba(0,0,0,0.9);
     --li-text-low: rgba(0,0,0,0.6);
@@ -13,21 +12,22 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
     background-color: var(--li-bg);
     color: var(--li-text);
-    line-height: 1.5;
+    /* MEJORA: Interlineado más amplio para lectura descansada */
+    line-height: 1.6; 
 }
 
-/* Navegación Superior con Iconos */
+/* Navegación */
 nav {
     display: flex;
     justify-content: center;
     background: var(--li-white);
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--li-border);
     position: sticky;
     top: 0;
@@ -37,123 +37,90 @@ nav {
 nav a {
     color: var(--li-text-low);
     text-decoration: none;
-    margin: 0 18px;
-    font-size: 0.75rem;
-    font-weight: 400;
+    margin: 0 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: color 0.2s;
-    min-width: 60px;
+    gap: 4px;
 }
 
-nav a i {
-    font-size: 1.3rem; /* Tamaño de icono estilo LinkedIn */
-    margin-bottom: 4px;
-}
-
-nav a:hover {
-    color: var(--li-text);
-}
-
-/* Header / Banner de Perfil */
+/* Header */
 header {
     background-color: var(--li-white);
-    padding: 2.5rem 1rem;
+    padding: 3.5rem 1rem; /* Más espacio arriba y abajo */
     text-align: center;
     border-bottom: 1px solid var(--li-border);
-    margin-bottom: 0;
 }
 
 header h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-header p {
-    color: var(--li-text-low);
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 5px auto 0;
-}
-
-header .location {
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: var(--li-text-low);
-}
-
-/* Contenedor Principal (Feed) */
+/* Contenedor Principal */
 main {
-    max-width: 780px;
-    margin: 1.5rem auto;
-    padding: 0 15px;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
 }
 
-/* Tarjetas de Sección */
+/* Tarjetas (Card) */
 .card {
     background: var(--li-white);
-    padding: 24px;
+    padding: 32px; /* Aumento de padding interno para que el texto no toque los bordes */
     border-radius: 8px;
     border: 1px solid var(--li-border);
-    margin-bottom: 12px;
+    margin-bottom: 24px; /* Más separación entre tarjetas */
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.05);
 }
 
 h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 18px;
+    font-size: 1.4rem;
+    margin-bottom: 20px; /* Separación del título con el contenido */
     color: var(--li-text);
 }
 
-/* Estructura de Filas con Iconos (Experiencia/Educación) */
+/* Párrafos y Listas */
+p {
+    margin-bottom: 1.5rem; /* Espacio generoso entre párrafos */
+}
+
+ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem; /* Espacio entre puntos de la lista */
+}
+
+/* Estructura de Filas (Experiencia/Blog) */
 .item-row {
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 25px; /* Más espacio entre cada puesto o artículo */
 }
 
-.item-row:last-child {
-    margin-bottom: 0;
+.item-content h3 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
 }
 
-.item-row i {
-    color: var(--li-text-low); /* Iconos en gris neutro, resaltan al hacer hover */
-    font-size: 1.5rem;
-    width: 32px;
-    text-align: center;
-    margin-top: 4px;
-}
-
-.item-content strong {
-    display: block;
-    font-size: 1rem;
-    color: var(--li-text);
-}
-
-.item-content span {
-    display: block;
-    font-size: 0.9rem;
+/* Citas (Blockquote) */
+blockquote {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-left: 4px solid var(--li-blue);
+    background-color: #f8faff;
+    font-style: italic;
     color: var(--li-text-low);
 }
 
-/* Artículos del Blog */
-article h3 {
-    color: var(--li-blue);
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-article h3:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
 footer {
     text-align: center;
-    padding: 2.5rem;
+    padding: 4rem 1rem;
     color: var(--li-text-low);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
