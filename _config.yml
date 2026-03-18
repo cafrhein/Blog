@@ -1,0 +1,24 @@
+# Configuración de Adestrat - Carlos Hernández
+title: Carlos Hernández
+email: cafrhein@outlook.com
+description: >-
+  Consejero externo para entidades sin fines de lucro. 
+  Estratega en planeación financiera y fortalecimiento institucional.
+
+# Configuración de URL
+url: "https://cafrhein.github.io"
+baseurl: "/Blog" # IMPORTANTE: Como tu repositorio se llama "Blog", debes poner esto.
+
+# Configuración de Lectura
+markdown: kramdown
+incremental: true
+
+# Excluir archivos que no deben procesarse
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
