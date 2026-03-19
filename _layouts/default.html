@@ -8,21 +8,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
 </head>
 <body>
 
     <nav>
-        <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i>Inicio</a>
-        <a href="{{ '/blog.html' | relative_url }}"><i class="fas fa-rss"></i>Blog</a>
-        <a href="{{ '/contacto.html' | relative_url }}"><i class="fas fa-envelope"></i>Contacto</a>
+        <a href="{{ '/' | relative_url }}">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="{{ '/2026/03/19/manifiesto-reciprocidad-cuidado.html' | relative_url }}">
+            <i class="fas fa-landmark"></i>
+            <span>Manifiesto</span>
+        </a>
+        <a href="{{ '/blog.html' | relative_url }}">
+            <i class="fas fa-rss"></i>
+            <span>Blog</span>
+        </a>
+        <a href="{{ '/contacto.html' | relative_url }}">
+            <i class="fas fa-envelope"></i>
+            <span>Contacto</span>
+        </a>
     </nav>
 
-    <main>
-        {{ content }}
-    </main>
+    {{ content }}
 
     <footer>
-        <p>© {{ "now" | date: "%Y" }} {{ site.title }} · Ciudad de México</p>
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <p>© {{ "now" | date: "%Y" }} · <strong>Carlos Hernández</strong></p>
+            <p style="font-size: 0.75rem; margin-top: 8px; color: var(--li-text-low);">
+                Estratega en Sistemas Humanos e Ingeniería de la Reciprocidad
+            </p>
+            <div style="margin-top: 15px; font-size: 1.2rem;">
+                <a href="https://www.linkedin.com/in/hernandezinurreta" target="_blank" style="color: var(--li-text-low); margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:cafrhein@outlook.com" style="color: var(--li-text-low); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
 
 </body>
